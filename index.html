@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Caitlyn Widiarta | Accounting Student at Eastern Michigan University</title>
+<meta name="description" content="Caitlyn Widiarta is an EMU accounting freshman interested in tax accounting, auditing, and cost accounting.">
+<style>
+:root{
+  --green:#006633;--green-dark:#04442a;--green-soft:#e8f2ec;
+  --ink:#1d2421;--muted:#55605a;--line:#d9e2dc;--white:#fff;
+  --serif:Georgia,"Times New Roman",serif;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:var(--sans);color:var(--ink);background:var(--white);line-height:1.65;font-size:17px}
+a{color:inherit}
+:focus-visible{outline:3px solid #f2c94c;outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--serif);font-weight:700;line-height:1.15}
+h2{font-size:clamp(1.8rem,4vw,2.4rem);color:var(--green-dark);margin-bottom:32px}
+section{padding:88px 0}
+section.alt{background:var(--green-soft)}
+
+/* Nav */
+nav{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.brand{font-family:var(--serif);font-weight:700;color:var(--green-dark);text-decoration:none;font-size:1.1rem}
+nav ul{display:flex;gap:24px;list-style:none}
+nav ul a{text-decoration:none;font-size:.95rem;color:var(--muted);padding:6px 0;border-bottom:2px solid transparent}
+nav ul a:hover{color:var(--green);border-color:var(--green)}
+.menu-btn{display:none;background:none;border:1px solid var(--line);border-radius:6px;padding:6px 12px;font:inherit;font-size:.9rem;cursor:pointer;color:var(--ink)}
+
+/* Hero: tennis-court lines */
+.hero{background:var(--green-dark);color:var(--white);position:relative;overflow:hidden;padding:110px 0 120px}
+.hero::before{content:"";position:absolute;inset:0;
+  background:
+   linear-gradient(rgba(255,255,255,.12),rgba(255,255,255,.12)) 0 62%/100% 2px no-repeat,
+   linear-gradient(rgba(255,255,255,.12),rgba(255,255,255,.12)) 78% 0/2px 100% no-repeat,
+   linear-gradient(rgba(255,255,255,.08),rgba(255,255,255,.08)) 92% 0/2px 100% no-repeat,
+   linear-gradient(rgba(255,255,255,.08),rgba(255,255,255,.08)) 0 20%/100% 2px no-repeat}
+.hero .wrap{position:relative}
+.hero p.school{font-size:1rem;color:#bfe0cc;margin-bottom:18px}
+.hero h1{font-size:clamp(2.8rem,9vw,5.6rem);letter-spacing:-.02em;margin-bottom:22px}
+.hero .tag{font-size:clamp(1.1rem,2.5vw,1.4rem);max-width:34ch;color:#e6f3ec;margin-bottom:36px}
+.btns{display:flex;flex-wrap:wrap;gap:14px}
+.btn{display:inline-block;padding:13px 26px;border-radius:6px;font-weight:600;text-decoration:none;font-size:1rem;border:2px solid transparent;transition:background .2s,color .2s,transform .2s;cursor:pointer;font-family:inherit}
+.btn:hover{transform:translateY(-2px)}
+.btn.primary{background:var(--white);color:var(--green-dark)}
+.btn.primary:hover{background:#f2c94c}
+.btn.ghost{border-color:rgba(255,255,255,.6);color:var(--white)}
+.btn.ghost:hover{background:rgba(255,255,255,.12)}
+.hero .wrap>*{animation:rise .8s both}
+.hero .wrap>*:nth-child(2){animation-delay:.1s}
+.hero .wrap>*:nth-child(3){animation-delay:.2s}
+.hero .wrap>*:nth-child(4){animation-delay:.3s}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+
+/* About */
+.about{display:grid;grid-template-columns:1.4fr 1fr;gap:56px;align-items:start}
+.about p+p{margin-top:16px}
+.facts{border-left:4px solid var(--green);padding:4px 0 4px 24px;list-style:none}
+.facts li{margin-bottom:16px}
+.facts b{display:block;font-family:var(--serif);color:var(--green-dark);font-size:1.05rem}
+.facts span{color:var(--muted);font-size:.95rem}
+
+/* Timeline */
+.timeline{position:relative;list-style:none;padding-left:34px}
+.timeline::before{content:"";position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:var(--green)}
+.timeline li{position:relative;margin-bottom:36px}
+.timeline li:last-child{margin-bottom:0}
+.timeline li::before{content:"";position:absolute;left:-34px;top:7px;width:16px;height:16px;border-radius:50%;background:var(--white);border:3px solid var(--green)}
+.timeline li.now::before{background:var(--green)}
+.timeline h3{font-size:1.3rem;color:var(--ink)}
+.org{color:var(--green);font-weight:600}
+.when{color:var(--muted);font-size:.92rem;margin:2px 0 8px}
+.status{display:inline-block;margin-left:8px;font-size:.78rem;font-family:var(--sans);font-weight:600;background:var(--green-soft);color:var(--green-dark);border-radius:20px;padding:2px 10px;vertical-align:middle}
+.timeline p{max-width:62ch}
+
+/* Skills */
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.skill{background:var(--white);border:1px solid var(--line);border-top:4px solid var(--green);border-radius:6px;padding:22px}
+.skill h3{font-size:1.1rem;margin-bottom:6px}
+.skill p{font-size:.95rem;color:var(--muted)}
+.interests{margin-top:44px}
+.interests h3{font-size:1.2rem;margin-bottom:14px;color:var(--green-dark)}
+.chips{display:flex;flex-wrap:wrap;gap:10px;list-style:none}
+.chips li{background:var(--green);color:var(--white);padding:8px 18px;border-radius:30px;font-size:.95rem}
+
+/* Projects */
+.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
+.project{border:1px solid var(--line);border-radius:8px;padding:28px;background:var(--white)}
+.project h3{font-size:1.25rem;margin-bottom:6px}
+.project .meta{font-size:.9rem;color:var(--muted);margin-bottom:12px}
+.project.soon{border-style:dashed;background:transparent;display:flex;flex-direction:column;justify-content:center;color:var(--muted)}
+
+/* Contact */
+.contact{background:var(--green-dark);color:var(--white)}
+.contact h2{color:var(--white)}
+.contact p{max-width:52ch;color:#d4e9dc;margin-bottom:28px}
+.contact .btn.primary:hover{background:#f2c94c}
+footer{background:#032e1c;color:#a9cdb8;text-align:center;font-size:.9rem;padding:22px}
+
+/* Scroll reveal */
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+
+@media (max-width:760px){
+  section{padding:64px 0}
+  .menu-btn{display:block}
+  nav ul{display:none;position:absolute;top:60px;left:0;right:0;flex-direction:column;gap:0;background:var(--white);border-bottom:1px solid var(--line);padding:8px 24px 16px}
+  nav ul.open{display:flex}
+  nav ul a{display:block;padding:12px 0}
+  .about{grid-template-columns:1fr;gap:32px}
+  .hero{padding:76px 0 84px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .reveal{opacity:1;transform:none;transition:none}
+  .hero .wrap>*{animation:none}
+  .btn:hover{transform:none}
+}
+</style>
+</head>
+<body>
+
+<nav aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="#top">Caitlyn Widiarta</a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="navList">Menu</button>
+    <ul id="navList">
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <p class="school">Eastern Michigan University, College of Business</p>
+    <h1>Caitlyn Widiarta</h1>
+    <p class="tag">EMU Accounting freshman dedicated to excellence and serving our communities.</p>
+    <div class="btns">
+      <a class="btn primary" href="resume.pdf" download>Download Resume</a>
+      <a class="btn ghost" href="#contact">Get in touch</a>
+    </div>
+  </div>
+</header>
+
+<main>
+<section id="about">
+  <div class="wrap about reveal">
+    <div>
+      <h2>About me</h2>
+      <p>I’m a first-year accounting student at Eastern Michigan University’s College of Business, working toward a Bachelor of Business Administration. I’m graduating in May 2030.</p>
+      <p>I’m drawn to the parts of accounting that help people and organizations stay accurate and accountable: tax accounting, auditing, and cost accounting. I’m building my foundation now through coursework, a team project, and a leadership role with a student club.</p>
+      <p>I care about doing careful work and being useful to the communities I’m part of.</p>
+    </div>
+    <ul class="facts">
+      <li><b>Degree</b><span>BBA in Accounting</span></li>
+      <li><b>School</b><span>Eastern Michigan University, College of Business</span></li>
+      <li><b>Year</b><span>Freshman, graduating May 2030</span></li>
+      <li><b>Looking for</b><span>Accounting experience in tax, audit, or cost accounting</span></li>
+    </ul>
+  </div>
+</section>
+
+<section id="experience" class="alt">
+  <div class="wrap reveal">
+    <h2>Experience</h2>
+    <ol class="timeline">
+      <li>
+        <h3>Document Clerk <span class="status">Upcoming</span></h3>
+        <div class="org">Andrews Hooper Pavlik</div>
+        <div class="when">February 15, 2027 – April 15, 2027</div>
+        <p>Internship supporting an accounting firm’s document and records work.</p>
+      </li>
+      <li class="now">
+        <h3>Treasurer <span class="status">Current</span></h3>
+        <div class="org">Eastern Michigan Club Tennis Team</div>
+        <div class="when">October 1, 2026 – Present</div>
+        <p>Elected officer responsible for the team’s finances and financial records.</p>
+      </li>
+      <li class="now">
+        <h3>Accounting/Finance Role <span class="status">Current</span></h3>
+        <div class="org">COB 200L4 Introduction to Business, Team Project and Presentation</div>
+        <div class="when">October 12, 2026 – December 14, 2026</div>
+        <p>Handled the accounting and finance portion of a team business project, and presented the results with my team.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap reveal">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="skill"><h3>Google Workspace</h3><p>Docs, Sheets, and Slides for collaboration and reporting.</p></div>
+      <div class="skill"><h3>Microsoft Office Suite</h3><p>Word, Excel, and PowerPoint for coursework and projects.</p></div>
+      <div class="skill"><h3>SEO Basics</h3><p>Understanding how people find information online.</p></div>
+      <div class="skill"><h3>Point of Sale Terminal</h3><p>Handling transactions accurately in a customer-facing setting.</p></div>
+    </div>
+    <div class="interests">
+      <h3>Career interests</h3>
+      <ul class="chips">
+        <li>Tax accounting</li>
+        <li>Auditing</li>
+        <li>Cost accounting</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="alt">
+  <div class="wrap reveal">
+    <h2>Projects</h2>
+    <div class="projects">
+      <article class="project">
+        <h3>COB 200L4 Business Team Project</h3>
+        <p class="meta">Introduction to Business, Fall 2026</p>
+        <p>Worked with a team to build and present a business project, and took responsibility for its accounting and finance side.</p>
+      </article>
+      <article class="project">
+        <h3>Club Tennis Team Finances</h3>
+        <p class="meta">Eastern Michigan Club Tennis, ongoing</p>
+        <p>Keeping the team’s money organized as treasurer, so members can focus on playing.</p>
+      </article>
+      <article class="project soon">
+        <h3>More on the way</h3>
+        <p>New coursework and projects will be added here as I complete them.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap reveal">
+    <h2>Contact</h2>
+    <p>I’m open to conversations about internships, accounting careers, and student opportunities. Email is the best way to reach me.</p>
+    <div class="btns">
+      <a class="btn primary" href="mailto:cwidiart@emich.edu">cwidiart@emich.edu</a>
+      <a class="btn ghost" href="https://www.linkedin.com/in/caitlyn-widiarta" target="_blank" rel="noopener">LinkedIn profile</a>
+      <a class="btn ghost" href="resume.pdf" download>Download Resume</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>© <span id="yr">2026</span> Caitlyn Widiarta · Eastern Michigan University</footer>
+
+<script>
+(function(){
+  var btn=document.getElementById('menuBtn'),list=document.getElementById('navList');
+  btn.addEventListener('click',function(){
+    var open=list.classList.toggle('open');
+    btn.setAttribute('aria-expanded',open);
+  });
+  list.addEventListener('click',function(e){
+    if(e.target.tagName==='A'){list.classList.remove('open');btn.setAttribute('aria-expanded','false');}
+  });
+  document.getElementById('yr').textContent=new Date().getFullYear();
+  var els=document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});
+    },{threshold:.12});
+    els.forEach(function(el){io.observe(el);});
+  }else{els.forEach(function(el){el.classList.add('in');});}
+})();
+</script>
+</body>
+</html>
